@@ -15,19 +15,48 @@ Last reviewed: **2026-09-20**.
 | --- | --- | --- |
 | [101 — Quick start](OpenQARP_Colab_101.ipynb) | Install OpenQARP; sample a Bell state; compare expectation values; run a small VQE-style search. | Working baseline reported by the author; preserved unchanged. |
 | [102 — Guided tutorial](OpenQARP_Colab_102_Tutorial.ipynb) | Follow the baseline code with learning objectives, mathematical explanations, exercises, and a results log. | Initial training edition; fresh Colab execution pending. |
-| [Tutorial 00 — Hello qarpx](OpenQARP_Tutorial_00_Hello_Qarp_Colab.ipynb) | Colab adaptation of the upstream introduction: build a Bell circuit, choose a primitive, run the engine, and read results. | Saved execution counts on all 7 code cells; no saved errors. Fresh execution not verified in this review. |
-| [Tutorial 01 — Blocks](OpenQARP_Tutorial_01_Blocks_Colab.ipynb) | Colab adaptation covering circuit builders, composition, measurements, symbolic parameters, and bit order. | Saved execution counts on all 7 code cells; no saved errors. Fresh execution not verified in this review. |
+
+### Tutorials 00–05 — complete series
+
+These six Colab notebooks build from a first circuit to complete quantum
+algorithm workflows. Read them in numerical order; each adds a layer to the
+previous tutorial. Basic Python and quantum-computing concepts are assumed.
+
+| Tutorial | Description | What you will learn |
+| --- | --- | --- |
+| [00 — Hello qarpx](OpenQARP_Tutorial_00_Hello_Qarp_Colab.ipynb) | Build and sample a Bell-state circuit in a minimal end-to-end example. | Connect a block, a sampling primitive, and an engine; interpret bit-tuple probabilities and inspect results. |
+| [01 — Blocks](OpenQARP_Tutorial_01_Blocks_Colab.ipynb) | Construct circuits from gate builders and compose reusable subcircuits. | Use the build lifecycle, measurements, symbolic parameters, and parameter binding; understand sorted symbols, radians, and LSB-first bit order. |
+| [02 — Primitives](OpenQARP_Tutorial_02_Primitives_Colab.ipynb) | Turn circuits into quantities such as distributions, overlaps, expectation values, and transition amplitudes. | Use the bra/operator/ket interface and choose between exact StateVector calculations and finite-shot estimators. |
+| [03 — Engines](OpenQARP_Tutorial_03_Engines_Colab.ipynb) | Compile circuits once and reuse them with different parameter values. | Control random seeds, run parameter sweeps with batch_run, evaluate gradients with run_gradient, and get an introduction to device configuration. |
+| [04 — Your own variational loop](OpenQARP_Tutorial_04_Variational_Loop_Colab.ipynb) | Find the ground-state energy of a three-qubit transverse-field Ising model with a manually assembled VQE loop, then the built-in VQE algorithm. | Connect an ansatz, estimator, engine, and optimizer; inspect convergence and use gradients in optimization. |
+| [05 — The algorithm toolbox](OpenQARP_Tutorial_05_Algorithm_Tour_Colab.ipynb) | Run QAOA on a six-node MaxCut problem and explore the wider algorithm catalogue. | Follow the construct/build/run/results workflow and locate reference examples for ground states, excited states, phase estimation, optimization, and dynamics. |
 
 ### Learning path
 
 Start with **101** to check the installation and see complete examples. Use
-**102** for guided explanations and exercises. Follow **Tutorial 00 → Tutorial 01**
-for the upstream tutorial sequence adapted to Colab. The 101/102 numbers identify
-this project's notebooks; 00/01 follow the upstream numbering.
+**102** for guided explanations and exercises. Continue through
+**00 → 01 → 02 → 03 → 04 → 05** to study the full stack:
+**first circuit → blocks → primitives → engines → variational loop → algorithm toolbox**.
 
-The local 00/01 notebooks identify their sources as upstream examples with added
-Colab setup cells. Their content has not been compared line by line with the latest
-upstream revision during this review.
+The 101/102 numbers identify this project's introductory notebooks; 00–05 follow
+the upstream tutorial numbering. Descriptions above were checked against the
+local notebook contents. The notebooks identify their sources as upstream
+examples with added Colab setup cells; their content has not been compared line
+by line with the latest upstream revision during this review.
+
+### Saved execution status
+
+| Tutorial | Code cells with saved execution counts | Saved errors |
+| --- | --- | --- |
+| 00 | 7 / 7 | 0 |
+| 01 | 7 / 7 | 0 |
+| 02 | 6 / 6 | 0 |
+| 03 | 6 / 6 | 0 |
+| 04 | 8 / 8 | 0 |
+| 05 | 3 / 3 | 0 |
+
+These are saved notebook records, not fresh execution results. Re-run each
+notebook in a clean runtime before recording it as currently validated.
 
 ## Run a notebook
 
@@ -47,10 +76,10 @@ future dependency releases may change behavior.
 - [x] Keep the original 101 notebook as the baseline.
 - [x] Create 102 with the same executable examples and added training material.
 - [x] Exclude `Ignore_folder/` and Jupyter checkpoints from Git.
-- [x] Add Tutorial 00 and Tutorial 01 to the tutorial index.
+- [x] Index all six tutorials (00–05) with descriptions, learning outcomes, and local notebook links.
 - [x] Add the official documentation domain and topic links.
 - [ ] Run 102 in a fresh Colab runtime and record package versions and results.
-- [ ] Re-run Tutorials 00 and 01 in fresh Colab runtimes and record versions and results.
+- [ ] Re-run Tutorials 00–05 in fresh Colab runtimes and record versions and results.
 - [ ] Complete the Bell-state and expectation-value exercises.
 - [ ] Compare optimization seeds, iteration budgets, and energy errors.
 - [ ] Add further tutorials after validating their examples.
@@ -61,6 +90,8 @@ future dependency releases may change behavior.
 | --- | --- | --- |
 | 2026-09-20 | Preserved 101; added guided 102 notebook, ignore rules, and tutorial tracking. | Notebook structure and code-copy checks performed locally; fresh Colab run pending. |
 | 2026-09-20 | Reviewed the four local notebooks; indexed Tutorials 00 and 01; updated documentation links and learning path. | Official documentation homepage reachable; 00/01 have saved execution counts and no saved errors. No notebooks executed or modified in this documentation review. |
+
+| 2026-09-20 | Expanded the tutorial presentation to the complete 00–05 series, including descriptions, learning outcomes, and saved execution status. | All six local notebooks reviewed; all have execution counts on every code cell and no saved errors. Fresh execution pending. |
 
 When adding a tutorial, add it to the index, describe its prerequisites and expected
 results, and update this log with the runtime, package version, and execution outcome.
