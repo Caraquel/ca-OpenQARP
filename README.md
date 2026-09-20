@@ -60,6 +60,46 @@ notebook in a clean runtime before recording it as currently validated.
 
 ## Run a notebook
 
+### Research application — benchmark 06
+
+[Open Research 06 — Multi-provider weighted MaxCut](OpenQARP_Research_06_MultiProvider_MaxCut_Colab.ipynb)
+extends tutorials 00–05 into a portfolio case study: partition a synthetic
+weighted conflict network, solve it classically, and compare a frozen QAOA
+circuit across quantum software stacks.
+
+| Component | What the notebook does |
+| --- | --- |
+| Classical reference | Exhaustive optimum, seeded local search, and an analytic random-partition baseline. |
+| Ideal simulation | Independent NumPy reference; Qiskit Aer, Qrisp-generated circuits on Aer, and Fujitsu OpenQARP. |
+| Device models | IBM Manila noise snapshot and IQM Adonis target/noise model, both simulated locally with Aer. |
+| Real hardware | Optional IBM Runtime and IQM connection, circuit review, submission, job recovery, and result retrieval. Disabled by default. |
+| Research evidence | Repeated seeds, sampling intervals, approximation ratios, optimum-hit probability, distribution distance, circuit resources, timings, raw counts, plots, and a ZIP export. |
+
+**Use in Colab:** upload the notebook, run its pinned installation cell in a
+fresh Python 3.11–3.13 CPU runtime, and proceed in order. The local comparison
+needs no account. Section 8 has separate IBM and IQM connection cells. IBM accepts
+`IBM_TOKEN` / `IBM_CRN`, with `IBM_QUANTUM_TOKEN` / `IBM_QUANTUM_CRN` as a fallback
+pair; IQM uses `IQM_API_TOKEN`. IBM lists your devices before you select a backend.
+IQM includes a Qrisp connection (Garnet or another entitled device), a separate
+benchmark adapter, and an optional `plus.get_measurement()` example. The current
+MaxCut hardware profile supports direct-coupling IQM devices; the Sirius Qrisp
+example is separate. Previously authenticated objects can also be reused.
+
+Read the [improved research prompt and design brief](Research_Benchmark_Brief.md).
+The [dependency profile](requirements-research06.txt) matches the notebook.
+See the [local validation report and sample results](reports/research06/VALIDATION.md):
+25 simulator runs completed, correctness checks passed, and local dependencies
+passed `pip check`. Fresh Colab and real-hardware execution remain pending.
+Results are written under ignored `benchmark_results/`; download the generated
+ZIP from Colab before disconnecting. Hardware ledgers prevent accidental repeat
+submissions and should be retained when restoring a session.
+
+Qrisp is a circuit framework, and IQM's fake backend uses Aer internally.
+Different bundled noise models cannot establish a hardware-vendor ranking.
+Small simulated examples and API timings do not establish quantum advantage.
+
+### Introductory and tutorial notebooks
+
 1. Open Google Colab and choose **File → Upload notebook**, then select a notebook from the index.
 2. Connect to a Python runtime and run cells from top to bottom, starting with installation.
 3. Check the printed results and assertions. The final optimization example reports
@@ -78,6 +118,9 @@ future dependency releases may change behavior.
 - [x] Exclude `Ignore_folder/` and Jupyter checkpoints from Git.
 - [x] Index all six tutorials (00–05) with descriptions, learning outcomes, and local notebook links.
 - [x] Add the official documentation domain and topic links.
+- [x] Add Research 06 with a classical baseline, simulator benchmark, and optional hardware workflow.
+- [ ] Run Research 06 in a fresh Google Colab runtime and record that environment.
+- [ ] Evaluate frozen Research 06 circuits on entitled IBM/IQM hardware and retain job evidence.
 - [ ] Run 102 in a fresh Colab runtime and record package versions and results.
 - [ ] Re-run Tutorials 00–05 in fresh Colab runtimes and record versions and results.
 - [ ] Complete the Bell-state and expectation-value exercises.
@@ -90,8 +133,9 @@ future dependency releases may change behavior.
 | --- | --- | --- |
 | 2026-09-20 | Preserved 101; added guided 102 notebook, ignore rules, and tutorial tracking. | Notebook structure and code-copy checks performed locally; fresh Colab run pending. |
 | 2026-09-20 | Reviewed the four local notebooks; indexed Tutorials 00 and 01; updated documentation links and learning path. | Official documentation homepage reachable; 00/01 have saved execution counts and no saved errors. No notebooks executed or modified in this documentation review. |
-
 | 2026-09-20 | Expanded the tutorial presentation to the complete 00–05 series, including descriptions, learning outcomes, and saved execution status. | All six local notebooks reviewed; all have execution counts on every code cell and no saved errors. Fresh execution pending. |
+| 2026-09-20 | Added Research 06: weighted MaxCut across classical methods, Qiskit/Qrisp, OpenQARP, and IBM/IQM noise models, with optional hardware cells. | [Local validation](reports/research06/VALIDATION.md): 25 simulator runs, circuit equivalence checks, clean dependency check, and offline job-recovery tests passed. Colab and hardware execution pending. |
+| 2026-09-20 | Split Research 06 hardware configuration into independent IBM and IQM cells, added both IBM Secret-name pairs and the Qrisp IQM measurement example. | Full local notebook rerun, independent-connection mock tests, job-ledger regression tests, and dependency checks passed. Live accounts and hardware not tested. |
 
 When adding a tutorial, add it to the index, describe its prerequisites and expected
 results, and update this log with the runtime, package version, and execution outcome.

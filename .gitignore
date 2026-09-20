@@ -3,3 +3,6 @@
 
 # Jupyter autosaves.
 .ipynb_checkpoints/
+
+# Local benchmark bundles and optional hardware job ledgers.
+/benchmark_results/

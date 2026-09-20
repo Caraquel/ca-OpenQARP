@@ -1,0 +1,15 @@
+# Shared Colab profile; keep in sync with the notebook installation cell.
+qiskit==2.1.2
+qiskit-aer==0.17.2
+qiskit-ibm-runtime==0.41.1
+iqm-client[qiskit,qrisp]==35.0.3
+qrisp==0.9.9
+openqarp==0.1.0
+numpy==2.3.5
+scipy==1.17.0
+pandas==2.3.3
+matplotlib==3.10.8
+networkx==3.5
+sympy==1.13.0
+# IQM pulls in SciPy typing helpers; keep their NumPy requirements compatible.
+scipy-stubs==1.17.0.0

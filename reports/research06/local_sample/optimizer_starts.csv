@@ -1,0 +1,4 @@
+seed,final_expected_cut,success,message,nfev,seconds
+7,7.005916001434699,True,Return from COBYLA because the trust region radius reaches its lower bound.,45,0.09842530003516003
+19,6.743979749528404,True,Return from COBYLA because the trust region radius reaches its lower bound.,50,0.07358409999869764
+41,8.346997077558932,True,Return from COBYLA because the trust region radius reaches its lower bound.,56,0.07291019998956472

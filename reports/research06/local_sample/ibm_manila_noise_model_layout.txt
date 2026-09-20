@@ -1,0 +1,13 @@
+TranspileLayout(initial_layout=Layout({
+3: <Qubit register=(5, "q"), index=1>,
+2: <Qubit register=(5, "q"), index=2>,
+4: <Qubit register=(5, "q"), index=0>,
+1: <Qubit register=(5, "q"), index=3>,
+0: <Qubit register=(5, "q"), index=4>
+}), input_qubit_mapping={<Qubit register=(5, "q"), index=0>: 0, <Qubit register=(5, "q"), index=1>: 1, <Qubit register=(5, "q"), index=2>: 2, <Qubit register=(5, "q"), index=3>: 3, <Qubit register=(5, "q"), index=4>: 4}, final_layout=Layout({
+1: <Qubit register=(5, "q"), index=4>,
+3: <Qubit register=(5, "q"), index=3>,
+4: <Qubit register=(5, "q"), index=2>,
+0: <Qubit register=(5, "q"), index=1>,
+2: <Qubit register=(5, "q"), index=0>
+}), _input_qubit_count=5, _output_qubit_list=[<Qubit register=(5, "q"), index=0>, <Qubit register=(5, "q"), index=1>, <Qubit register=(5, "q"), index=2>, <Qubit register=(5, "q"), index=3>, <Qubit register=(5, "q"), index=4>])

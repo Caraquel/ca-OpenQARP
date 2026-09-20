@@ -1,0 +1,100 @@
+[
+  {
+    "track": "Aer ideal",
+    "seed": null,
+    "seconds": 0.16412679996574298,
+    "depth": 21,
+    "two_qubit_gates": 14,
+    "operations": {
+      "cx": 14,
+      "rz": 7,
+      "h": 5,
+      "rx": 5,
+      "measure": 5,
+      "barrier": 1
+    }
+  },
+  {
+    "track": "Qrisp to Aer ideal",
+    "seed": null,
+    "seconds": 0.08293719997163862,
+    "depth": 21,
+    "two_qubit_gates": 14,
+    "operations": {
+      "cx": 14,
+      "h": 5,
+      "rz": 5,
+      "measure": 5,
+      "rx": 3,
+      "u3": 2,
+      "barrier": 1
+    }
+  },
+  {
+    "track": "IBM Manila noise model",
+    "seed": null,
+    "seconds": 0.015367100015282631,
+    "depth": 46,
+    "two_qubit_gates": 29,
+    "operations": {
+      "rz": 32,
+      "cx": 29,
+      "sx": 15,
+      "measure": 5,
+      "barrier": 1
+    }
+  },
+  {
+    "track": "IQM Adonis noise model",
+    "seed": null,
+    "seconds": 0.01945469999918714,
+    "depth": 46,
+    "two_qubit_gates": 23,
+    "operations": {
+      "r": 37,
+      "cz": 23,
+      "measure": 5,
+      "barrier": 1
+    }
+  },
+  {
+    "track": "OpenQARP ideal",
+    "seed": 11,
+    "seconds": 0.00021979998564347625,
+    "depth": null,
+    "two_qubit_gates": null,
+    "operations": {}
+  },
+  {
+    "track": "OpenQARP ideal",
+    "seed": 23,
+    "seconds": 0.00012310000602155924,
+    "depth": null,
+    "two_qubit_gates": null,
+    "operations": {}
+  },
+  {
+    "track": "OpenQARP ideal",
+    "seed": 37,
+    "seconds": 0.00036539998836815357,
+    "depth": null,
+    "two_qubit_gates": null,
+    "operations": {}
+  },
+  {
+    "track": "OpenQARP ideal",
+    "seed": 53,
+    "seconds": 0.00011980003910139203,
+    "depth": null,
+    "two_qubit_gates": null,
+    "operations": {}
+  },
+  {
+    "track": "OpenQARP ideal",
+    "seed": 71,
+    "seconds": 0.0003709000302478671,
+    "depth": null,
+    "two_qubit_gates": null,
+    "operations": {}
+  }
+]
