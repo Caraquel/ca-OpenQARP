@@ -1,0 +1,5 @@
+# Local experiments and scratch notebooks (keep files on disk).
+/Ignore_folder/
+
+# Jupyter autosaves.
+.ipynb_checkpoints/
